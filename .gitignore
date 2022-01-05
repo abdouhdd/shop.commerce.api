@@ -14,4 +14,7 @@
 /shop.commerce.api.engine/bin
 /shop.commerce.api.engine/obj
 /shop.commerce.api.services/bin
-/shop.commerce.api.database
+
+/shop.commerce.api.database/shop.commerce.api.database.jfm
+/shop.commerce.api.database/bin
+*.dbmdl

@@ -1,0 +1,77 @@
+07/07/2021 16:02:21	Ce journal contient des informations sur l'importation du schéma dans le projet 'shop.commerce.api.database' sur l'ordinateur 'DESKTOP-JBCV0OQ' par l'utilisateur 'lenovo'.
+07/07/2021 16:02:21	L'importation du schéma de base de données a commencé.
+07/07/2021 16:02:24	Collecte des options de la base de données
+07/07/2021 16:02:24	Collecte des utilisateurs
+07/07/2021 16:02:24	Collecte des rôles
+07/07/2021 16:02:24	Collecte des rôles d'application
+07/07/2021 16:02:24	Collecte des appartenances aux rôles
+07/07/2021 16:02:24	Collecte des groupes de fichiers
+07/07/2021 16:02:24	Collecte des fichiers
+07/07/2021 16:02:24	Collecte des catalogues de recherche en texte intégral
+07/07/2021 16:02:24	Collecte des assemblys
+07/07/2021 16:02:24	Collecte des certificats
+07/07/2021 16:02:24	Collecte des clés asymétriques
+07/07/2021 16:02:24	Collecte des clés symétriques
+07/07/2021 16:02:24	Collecte des clés symétriques chiffrées
+07/07/2021 16:02:24	Collecte des clés de chiffrement de la base de données
+07/07/2021 16:02:24	Collecte des schémas
+07/07/2021 16:02:25	Collecte des collections de schémas XML
+07/07/2021 16:02:25	Collecte des types de données définis par l'utilisateur
+07/07/2021 16:02:25	Collecte des types définis par l'utilisateur
+07/07/2021 16:02:25	Collecte des types de tables
+07/07/2021 16:02:25	Collecte des clés uniques des types de tables
+07/07/2021 16:02:25	Collecte des clés primaires pour les types de tables
+07/07/2021 16:02:25	Collecte des contraintes de validation pour les types de tables
+07/07/2021 16:02:25	Collecte des contraintes par défaut pour les types de tables
+07/07/2021 16:02:25	Collecte des fonctions de partition
+07/07/2021 16:02:25	Collecte des schémas de partition
+07/07/2021 16:02:25	Collecte des fonctions
+07/07/2021 16:02:25	Collecte de fonctions cryptées
+07/07/2021 16:02:25	Collecte des agrégats
+07/07/2021 16:02:25	Collecte des procédures
+07/07/2021 16:02:25	Collecte de procédures cryptées
+07/07/2021 16:02:25	Collecte des tables
+07/07/2021 16:02:25	Collecte des clés primaires
+07/07/2021 16:02:25	Collecte des contraintes uniques
+07/07/2021 16:02:25	Collecte des clés étrangères
+07/07/2021 16:02:25	Collecte des contraintes par défaut
+07/07/2021 16:02:25	Collecte des contraintes de validation
+07/07/2021 16:02:25	Collecte des vues
+07/07/2021 16:02:25	Collecte de vues cryptées
+07/07/2021 16:02:25	Collecte des index
+07/07/2021 16:02:25	Collecte des statistiques
+07/07/2021 16:02:25	Collecte des listes de mots vides d'index de recherche en texte intégral
+07/07/2021 16:02:25	Collecte des listes de propriétés de recherche
+07/07/2021 16:02:25	Collecte des propriétés de recherche
+07/07/2021 16:02:25	Collecte des index de recherche en texte intégral
+07/07/2021 16:02:25	Collecte des index de la banque de colonnes
+07/07/2021 16:02:25	Collecte des index spatiaux
+07/07/2021 16:02:25	Collecte des index XML
+07/07/2021 16:02:25	Collecte d'index XML sélectifs
+07/07/2021 16:02:25	Collecte de déclencheurs cryptés
+07/07/2021 16:02:25	Collecte des déclencheurs
+07/07/2021 16:02:25	Collecte des déclencheurs chiffrés et DDL CLR
+07/07/2021 16:02:25	Collecte des DDL triggers
+07/07/2021 16:02:25	Collecte des synonymes
+07/07/2021 16:02:25	Collecte des valeurs par défaut
+07/07/2021 16:02:25	Collecte des liaisons UDDT de contrainte de données
+07/07/2021 16:02:25	Collecte des règles
+07/07/2021 16:02:25	Collecte des liaisons UDDT de contrainte de données
+07/07/2021 16:02:25	Collecte des types de messages
+07/07/2021 16:02:25	Collecte des files d'attente
+07/07/2021 16:02:25	Collecte des contrats
+07/07/2021 16:02:25	Collecte des services
+07/07/2021 16:02:25	Collecte des itinéraires
+07/07/2021 16:02:25	Collecte des notifications d'événements
+07/07/2021 16:02:25	Collecte des liaisons de service distant
+07/07/2021 16:02:25	Collecte des priorités de Service Broker
+07/07/2021 16:02:25	Collecte des spécifications de l'audit de la base de données
+07/07/2021 16:02:25	Collecte des signatures
+07/07/2021 16:02:25	Collection des options de compression de données
+07/07/2021 16:02:25	Collecte des types de séquences
+07/07/2021 16:02:25	Collection des propriétés étendues
+07/07/2021 16:02:25	Analyse du projet à la recherche des éléments en double
+07/07/2021 16:02:26	Fin du traitement des éléments en double
+07/07/2021 16:02:26	Importation de la base de données terminée.
+07/07/2021 16:02:26	Un résumé de l'opération d'importation a été enregistré à l'emplacement suivant : C:\Users\lenovo\source\repos\hddbrahim123\shop.commerce.api\shop.commerce.api.database\Importer les journaux de schémas\shop.commerce.api.da_20210707040221.log.
+07/07/2021 16:02:26	Cliquez sur Terminer pour continuer...

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="dcc9ba15-6140-4b1e-b41b-668c4d4fa8f7" ChangeDateTime="09/17/2021 15:30:51">
+    <Property Name="ElementName" Value="[dbo].[Admins].[EnumStatusAccount]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Admins]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Status" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7b026e64-72dc-495e-a222-2d197fdcf314" ChangeDateTime="09/18/2021 01:11:54">
+    <Property Name="ElementName" Value="[dbo].[Admins].[DateDesactivado]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Admins]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DateDesactive" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="384c9557-4910-4f1c-b2ef-1446acbf7504" ChangeDateTime="11/28/2021 12:05:44">
+    <Property Name="ElementName" Value="[dbo].[ProductImages].[ImageGuid]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ProductImages]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Id" />
+  </Operation>
+</Operations>
