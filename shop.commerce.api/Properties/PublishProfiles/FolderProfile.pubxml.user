@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\lenovo\source\repos\hddbrahim123\shop.commerce.api\shop.commerce.api\bin\Release\net5.0\publish\</_PublishTargetUrl>
+    <History>False|2021-10-13T16:40:56.7965000Z;True|2021-09-19T15:59:21.2519317+01:00;True|2021-09-14T18:53:51.8287092+01:00;True|2021-09-13T16:24:43.5266437+01:00;True|2021-08-15T16:57:32.7477670+01:00;True|2021-08-12T06:13:40.6391952+01:00;True|2021-08-11T16:11:31.5773277+01:00;True|2021-08-10T14:26:10.0531876+01:00;True|2021-08-04T23:12:41.4181929+01:00;True|2021-08-04T10:13:32.2554968+01:00;True|2021-08-04T10:09:20.8988604+01:00;True|2021-08-04T09:37:38.8992105+01:00;True|2021-06-28T00:38:07.6768357+01:00;True|2021-06-28T00:36:52.7288597+01:00;True|2021-06-23T18:45:47.5312257+01:00;</History>
+  </PropertyGroup>
+</Project>

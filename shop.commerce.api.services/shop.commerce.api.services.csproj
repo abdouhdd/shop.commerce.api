@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\shop.commerce.api.Application\shop.commerce.api.Application.csproj" />
+    <ProjectReference Include="..\shop.commerce.api.domain\shop.commerce.api.domain.csproj" />
+    <ProjectReference Include="..\shop.commerce.api.engine\shop.commerce.api.infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

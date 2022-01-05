@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "shop.commerce.api.domain", "shop.commerce.api.domain\shop.commerce.api.domain.csproj", "{49F04A7C-D4BC-42E9-847B-5C5C04468B63}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "shop.commerce.api.presentation", "shop.commerce.api\shop.commerce.api.presentation.csproj", "{A7BE8F30-9A81-4856-9946-E4EA46254B2D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "shop.commerce.api.infrastructure", "shop.commerce.api.engine\shop.commerce.api.infrastructure.csproj", "{B8EDF179-8365-4177-9197-D9B8A1A1A19C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "shop.commerce.api.services", "shop.commerce.api.services\shop.commerce.api.services.csproj", "{95C91604-6026-4CDF-A9FC-73493889530C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "shop.commerce.api.Application", "shop.commerce.api.Application\shop.commerce.api.Application.csproj", "{7C35ED18-ED25-4E7B-8C18-FFE7ECD1A2B6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{49F04A7C-D4BC-42E9-847B-5C5C04468B63} = {49F04A7C-D4BC-42E9-847B-5C5C04468B63}
+	EndProjectSection
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "shop.commerce.api.database", "shop.commerce.api.database\shop.commerce.api.database.sqlproj", "{1DC7D90B-5188-4D54-9FFC-146E46F68D46}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{08653BE0-761A-4126-968E-25933F9E5E97}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{C7994DBF-C645-4CFC-9566-D891B0963831}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "shop.commerce.api.common", "shop.commerce.api.common\shop.commerce.api.common.csproj", "{E1A9306D-BA07-41C6-977A-1FBC01D0B0F4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "server", "server", "{3070C932-5CB3-4E79-B4AC-D5D0C545E822}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Documents\trucs\backup postgre database 9.6 = ..\..\..\..\Documents\trucs\backup postgre database 9.6
+		..\..\..\..\Documents\trucs\install ecommerce api core 5.0 on ubuntu 18.04 = ..\..\..\..\Documents\trucs\install ecommerce api core 5.0 on ubuntu 18.04
+		..\..\..\..\Documents\trucs\etnt\new sql modifications.txt = ..\..\..\..\Documents\trucs\etnt\new sql modifications.txt
+		..\..\..\..\Documents\trucs\Run Multiple Site from one IP with reverse proxy Nginx.txt = ..\..\..\..\Documents\trucs\Run Multiple Site from one IP with reverse proxy Nginx.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49F04A7C-D4BC-42E9-847B-5C5C04468B63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49F04A7C-D4BC-42E9-847B-5C5C04468B63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49F04A7C-D4BC-42E9-847B-5C5C04468B63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49F04A7C-D4BC-42E9-847B-5C5C04468B63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7BE8F30-9A81-4856-9946-E4EA46254B2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7BE8F30-9A81-4856-9946-E4EA46254B2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7BE8F30-9A81-4856-9946-E4EA46254B2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7BE8F30-9A81-4856-9946-E4EA46254B2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8EDF179-8365-4177-9197-D9B8A1A1A19C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8EDF179-8365-4177-9197-D9B8A1A1A19C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8EDF179-8365-4177-9197-D9B8A1A1A19C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8EDF179-8365-4177-9197-D9B8A1A1A19C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95C91604-6026-4CDF-A9FC-73493889530C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95C91604-6026-4CDF-A9FC-73493889530C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95C91604-6026-4CDF-A9FC-73493889530C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95C91604-6026-4CDF-A9FC-73493889530C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C35ED18-ED25-4E7B-8C18-FFE7ECD1A2B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C35ED18-ED25-4E7B-8C18-FFE7ECD1A2B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C35ED18-ED25-4E7B-8C18-FFE7ECD1A2B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C35ED18-ED25-4E7B-8C18-FFE7ECD1A2B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DC7D90B-5188-4D54-9FFC-146E46F68D46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DC7D90B-5188-4D54-9FFC-146E46F68D46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DC7D90B-5188-4D54-9FFC-146E46F68D46}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1DC7D90B-5188-4D54-9FFC-146E46F68D46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DC7D90B-5188-4D54-9FFC-146E46F68D46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DC7D90B-5188-4D54-9FFC-146E46F68D46}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E1A9306D-BA07-41C6-977A-1FBC01D0B0F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1A9306D-BA07-41C6-977A-1FBC01D0B0F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1A9306D-BA07-41C6-977A-1FBC01D0B0F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1A9306D-BA07-41C6-977A-1FBC01D0B0F4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C7994DBF-C645-4CFC-9566-D891B0963831} = {08653BE0-761A-4126-968E-25933F9E5E97}
+		{E1A9306D-BA07-41C6-977A-1FBC01D0B0F4} = {C7994DBF-C645-4CFC-9566-D891B0963831}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C6D4D579-B8D6-4676-B3B0-5978C6542646}
+	EndGlobalSection
+EndGlobal
