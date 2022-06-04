@@ -1047,7 +1047,11 @@ namespace shop.commerce.api.services.Services
                 _logger.LogError(ex, ex.Message);
             }
         }
-
+        public MyResult<Admin[]> GetSellers(DataUser dataUser)
+        {
+            var admins = _adminRepository.GetAll();
+            return MyResult<Admin[]>.ResultSuccess(admins);
+        }
         public MyResult<string> CreateSeller(AdminPutModel model, DataUser dataUser)
         {
             var all = _adminRepository.GetAll(req => req.AddPredicate(a => a.Email == model.Email || a.Username == model.Username));

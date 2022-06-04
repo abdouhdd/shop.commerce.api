@@ -38,5 +38,6 @@ namespace shop.commerce.api.services.Services
         void UpdateImagesPosition(DataUser dataUser);
         MyResult<int> DesactivateProduct(string slug, DataUser dataUser);
         MyResult<string> CreateSeller(AdminPutModel model, DataUser dataUser);
+        MyResult<Admin[]> GetSellers(DataUser dataUser);
     }
 }

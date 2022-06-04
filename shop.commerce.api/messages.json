@@ -21,5 +21,6 @@
   "UpdateSlideError": "Echec de modification du slide",
   "InvalidPassword": "Mot de passe invalide, {Tentatives} tentatives restent",
   "UserDesactiveEnTime": "L'utilisateur est désactivé, veuillez réessayer après {time}.",
-  "UserBloque": "L'utilisateur est bloqué."
+  "UserBloque": "L'utilisateur est bloqué.",
+  "CreateSellerExiste": "email ou username déja existe"
 }

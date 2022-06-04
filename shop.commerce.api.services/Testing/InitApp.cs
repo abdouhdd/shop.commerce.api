@@ -54,31 +54,36 @@ namespace shop.commerce.api.services.Testing
                 {
                     Email = "admin@gmail.com",
                     Username = "admin",
-                    PasswordHash = password
+                    PasswordHash = password,
+                    Status = EnumStatusAccount.Active
                 },
                 new Admin
                 {
                     Email = "saoudnet@gmail.com",
                     Username = "saoudnet",
-                    PasswordHash = password2
+                    PasswordHash = password2,
+                    Status = EnumStatusAccount.Active
                 },
                 new Admin
                 {
                     Email = "alfaker.10@gmail.com",
                     Username = "alfaker",
-                    PasswordHash = password2
+                    PasswordHash = password2,
+                    Status = EnumStatusAccount.Active
                 },
                 new Admin
                 {
                     Email = "fibronet.ma@gmail.com",
                     Username = "fibronet",
-                    PasswordHash = password2
+                    PasswordHash = password2,
+                    Status = EnumStatusAccount.Active
                 },
                 new Admin
                 {
                     Email = "s.saoud.etnt@gmail.com",
                     Username = "saoud",
-                    PasswordHash = password2
+                    PasswordHash = password2,
+                    Status = EnumStatusAccount.Active
                 },
             };
             

@@ -183,8 +183,15 @@ namespace shop.commerce.api.presentation.Controllers
         [HttpPost("CreateSeller")]
         public ActionResult CreateSeller(AdminPutModel model)
         {
-            _adminService.CreateSeller(model, DataUser);
-            return Ok();
+            var result = _adminService.CreateSeller(model, DataUser);
+            return Ok(result);
+        }
+
+        [HttpGet("GetSellers")]
+        public ActionResult GetSellers()
+        {
+            var result = _adminService.GetSellers(DataUser);
+            return Ok(result);
         }
     }
 }
