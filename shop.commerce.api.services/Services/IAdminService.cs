@@ -2,6 +2,7 @@
 using shop.commerce.api.domain.Enum;
 using shop.commerce.api.domain.Filters;
 using shop.commerce.api.domain.Models;
+using shop.commerce.api.domain.Models.Request;
 using shop.commerce.api.domain.Models.Response;
 using shop.commerce.api.domain.Request;
 using shop.commerce.api.domain.Views;
@@ -36,5 +37,6 @@ namespace shop.commerce.api.services.Services
         MyResult<int> UpdateAllSearchTerms(DataUser dataUser);
         void UpdateImagesPosition(DataUser dataUser);
         MyResult<int> DesactivateProduct(string slug, DataUser dataUser);
+        MyResult<string> CreateSeller(AdminPutModel model, DataUser dataUser);
     }
 }

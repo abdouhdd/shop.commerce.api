@@ -14,6 +14,7 @@ using System.Net.Http.Headers;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Authorization;
 using shop.commerce.api.domain.Enum;
+using shop.commerce.api.domain.Models.Request;
 
 namespace shop.commerce.api.presentation.Controllers
 {
@@ -177,6 +178,13 @@ namespace shop.commerce.api.presentation.Controllers
         {
             var orderTrackings = _adminService.GetOrderTrackings(orderNumber, DataUser);
             return Ok(orderTrackings);
+        }
+
+        [HttpPost("CreateSeller")]
+        public ActionResult CreateSeller(AdminPutModel model)
+        {
+            _adminService.CreateSeller(model, DataUser);
+            return Ok();
         }
     }
 }

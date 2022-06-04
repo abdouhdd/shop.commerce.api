@@ -5,6 +5,7 @@ using shop.commerce.api.domain.Enum;
 using shop.commerce.api.domain.Extensions;
 using shop.commerce.api.domain.Filters;
 using shop.commerce.api.domain.Models;
+using shop.commerce.api.domain.Models.Request;
 using shop.commerce.api.domain.Models.Response;
 using shop.commerce.api.domain.Request;
 using shop.commerce.api.domain.Views;
@@ -26,6 +27,7 @@ namespace shop.commerce.api.services.Services
         private readonly ICategoryRepository _categoryRepository;
         private readonly IOrderRepository _orderRepository;
         private readonly IOrderTrackingRepository _orderTrackingRepository;
+        private readonly IAdminRepository _adminRepository;
         private readonly ILogger<AdminService> _logger;
         private readonly MessagesHelper _messagesHelper;
         public IApplicationSettingsAccessor ApplicationSettingsAccessor { get; set; }
@@ -35,6 +37,7 @@ namespace shop.commerce.api.services.Services
             IOrderRepository orderRepository,
             IProductImageRepository productImageRepository,
             IOrderTrackingRepository orderTrackingRepository,
+            IAdminRepository adminRepository,
             ILogger<AdminService> logger,
             MessagesHelper messagesHelper)
         {
@@ -43,6 +46,7 @@ namespace shop.commerce.api.services.Services
             _orderRepository = orderRepository;
             _productImageRepository = productImageRepository;
             _orderTrackingRepository = orderTrackingRepository;
+            _adminRepository = adminRepository;
             _logger = logger;
             _messagesHelper = messagesHelper;
         }
@@ -1043,5 +1047,35 @@ namespace shop.commerce.api.services.Services
                 _logger.LogError(ex, ex.Message);
             }
         }
+
+        public MyResult<string> CreateSeller(AdminPutModel model, DataUser dataUser)
+        {
+            var all = _adminRepository.GetAll(req => req.AddPredicate(a => a.Email == model.Email || a.Username == model.Username));
+            if (all.Length > 0)
+            {
+                return MyResult<string>.ResultError("", _messagesHelper.GetMessageCode(MyResultCode.CreateSellerExiste), MyResultCode.CreateSellerExiste);
+            }
+            Admin admin = new Admin
+            {
+                Id = 0,
+                Firstname = model.Firstname,
+                Lastname = model.Lastname,
+                Email = model.Email,
+                Username = model.Username,
+                Status = EnumStatusAccount.Active
+            };
+            admin.Role = EnumRole.Admin;
+            admin.RegistrationDate = DateTime.UtcNow;
+
+            HashMD5 hashMD5 = new HashMD5();
+            if (!string.IsNullOrEmpty(model.Password))
+            {
+                admin.PasswordHash = hashMD5.GetMd5Hash(model.Password);
+            }
+
+            common.Result output = _adminRepository.Add(admin);
+            return MyResult<string>.ResultSuccess("");
+        }
+
     }
 }

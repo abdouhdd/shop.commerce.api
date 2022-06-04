@@ -42,6 +42,7 @@ namespace shop.commerce.api.domain.Models
         public const string InvalidPassword = "InvalidPassword";
         public const string UserDesactiveEnTime = "UserDesactiveEnTime";
         public const string UserBloque = "UserBloque";
+        public const string CreateSellerExiste = "CreateSellerExiste";
 
     }
 }
