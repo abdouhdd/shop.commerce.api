@@ -77,6 +77,7 @@ namespace shop.commerce.api.services.Services
         {
             try
             {
+                productFilter.Seller = admin.Username;
                 List<ProductView> productViews = _productRepository.GetProductsViewAdmin(productFilter);
                 //if (productViews != null)
                 //{
@@ -99,6 +100,8 @@ namespace shop.commerce.api.services.Services
             ResultPage<ProductView> productViews = null;
             try
             {
+                // productFilter.Seller = seller.Username;
+
                 int[] categories = null;
                 if (productFilter.CategoryId > 0)
                 {

@@ -187,7 +187,7 @@ namespace shop.commerce.api.infrastructure.Repositories.EntityFramework
             var query = from p in _entity
                         join c in _context.Categories on p.CategoryId equals c.Id
                         join i in _context.ProductImages on p.Id equals i.ProductId
-                        where p.Active && i.IsMaster && i.Position == 0 && (categoryId == 0 || p.CategoryId == categoryId) && (isNotSearch || p.SearchTerms.Contains(search.ToLower()))
+                        where p.Active && i.IsMaster && i.Position == 0 && (categoryId == 0 || p.CategoryId == categoryId) && (isNotSearch || p.SearchTerms.Contains(search.ToLower()) && (productFilter.Seller == null || p.Admin == productFilter.Seller))
                         select new ProductView
                         {
                             Id = p.Id,
@@ -215,7 +215,7 @@ namespace shop.commerce.api.infrastructure.Repositories.EntityFramework
             var query = from p in _entity
                         join c in _context.Categories on p.CategoryId equals c.Id
                         join i in _context.ProductImages on p.Id equals i.ProductId
-                        where i.IsMaster && i.Position == 0 && (categories == null || (p.CategoryId.HasValue && categories.Contains(p.CategoryId.Value))) && (isNotSearch || p.SearchTerms.Contains(search.ToLower()))
+                        where i.IsMaster && i.Position == 0 && (categories == null || (p.CategoryId.HasValue && categories.Contains(p.CategoryId.Value))) && (isNotSearch || p.SearchTerms.Contains(search.ToLower())) && (productFilter.Seller == null || p.Admin == productFilter.Seller)
                         orderby p.Position
                         //orderby p.Rating descending, p.Position ascending
                         select new ProductView

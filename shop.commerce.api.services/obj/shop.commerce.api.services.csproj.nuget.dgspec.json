@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.services\\shop.commerce.api.services.csproj": {}
+    "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.services\\shop.commerce.api.services.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.Application\\shop.commerce.api.Application.csproj": {
+    "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.Application\\shop.commerce.api.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.Application\\shop.commerce.api.Application.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.Application\\shop.commerce.api.Application.csproj",
         "projectName": "shop.commerce.api.Application",
-        "projectPath": "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.Application\\shop.commerce.api.Application.csproj",
-        "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.Application\\obj\\",
+        "projectPath": "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.Application\\shop.commerce.api.Application.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.Application\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -32,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.domain\\shop.commerce.api.domain.csproj": {
-                "projectPath": "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.domain\\shop.commerce.api.domain.csproj"
+              "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.domain\\shop.commerce.api.domain.csproj": {
+                "projectPath": "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.domain\\shop.commerce.api.domain.csproj"
               }
             }
           }
@@ -68,26 +64,27 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
         }
       }
     },
-    "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.common\\shop.commerce.api.common.csproj": {
+    "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.common\\shop.commerce.api.common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.common\\shop.commerce.api.common.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.common\\shop.commerce.api.common.csproj",
         "projectName": "shop.commerce.api.common",
-        "projectPath": "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.common\\shop.commerce.api.common.csproj",
-        "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.common\\obj\\",
+        "projectPath": "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.common\\shop.commerce.api.common.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.common\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -132,26 +129,27 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
         }
       }
     },
-    "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.domain\\shop.commerce.api.domain.csproj": {
+    "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.domain\\shop.commerce.api.domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.domain\\shop.commerce.api.domain.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.domain\\shop.commerce.api.domain.csproj",
         "projectName": "shop.commerce.api.domain",
-        "projectPath": "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.domain\\shop.commerce.api.domain.csproj",
-        "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.domain\\obj\\",
+        "projectPath": "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.domain\\shop.commerce.api.domain.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -190,26 +188,27 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
         }
       }
     },
-    "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.engine\\shop.commerce.api.infrastructure.csproj": {
+    "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.engine\\shop.commerce.api.infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.engine\\shop.commerce.api.infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.engine\\shop.commerce.api.infrastructure.csproj",
         "projectName": "shop.commerce.api.infrastructure",
-        "projectPath": "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.engine\\shop.commerce.api.infrastructure.csproj",
-        "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.engine\\obj\\",
+        "projectPath": "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.engine\\shop.commerce.api.infrastructure.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.engine\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -222,14 +221,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.Application\\shop.commerce.api.Application.csproj": {
-                "projectPath": "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.Application\\shop.commerce.api.Application.csproj"
+              "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.Application\\shop.commerce.api.Application.csproj": {
+                "projectPath": "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.Application\\shop.commerce.api.Application.csproj"
               },
-              "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.common\\shop.commerce.api.common.csproj": {
-                "projectPath": "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.common\\shop.commerce.api.common.csproj"
+              "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.common\\shop.commerce.api.common.csproj": {
+                "projectPath": "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.common\\shop.commerce.api.common.csproj"
               },
-              "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.domain\\shop.commerce.api.domain.csproj": {
-                "projectPath": "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.domain\\shop.commerce.api.domain.csproj"
+              "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.domain\\shop.commerce.api.domain.csproj": {
+                "projectPath": "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.domain\\shop.commerce.api.domain.csproj"
               }
             }
           }
@@ -294,26 +293,27 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
         }
       }
     },
-    "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.services\\shop.commerce.api.services.csproj": {
+    "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.services\\shop.commerce.api.services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.services\\shop.commerce.api.services.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.services\\shop.commerce.api.services.csproj",
         "projectName": "shop.commerce.api.services",
-        "projectPath": "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.services\\shop.commerce.api.services.csproj",
-        "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.services\\obj\\",
+        "projectPath": "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.services\\shop.commerce.api.services.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.services\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -326,14 +326,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.Application\\shop.commerce.api.Application.csproj": {
-                "projectPath": "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.Application\\shop.commerce.api.Application.csproj"
+              "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.Application\\shop.commerce.api.Application.csproj": {
+                "projectPath": "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.Application\\shop.commerce.api.Application.csproj"
               },
-              "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.domain\\shop.commerce.api.domain.csproj": {
-                "projectPath": "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.domain\\shop.commerce.api.domain.csproj"
+              "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.domain\\shop.commerce.api.domain.csproj": {
+                "projectPath": "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.domain\\shop.commerce.api.domain.csproj"
               },
-              "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.engine\\shop.commerce.api.infrastructure.csproj": {
-                "projectPath": "C:\\Users\\lenovo\\source\\repos\\etnt\\shop.commerce.api\\shop.commerce.api.engine\\shop.commerce.api.infrastructure.csproj"
+              "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.engine\\shop.commerce.api.infrastructure.csproj": {
+                "projectPath": "C:\\Users\\hp\\source\\repos\\ecoomerce\\shop.commerce.api\\shop.commerce.api.engine\\shop.commerce.api.infrastructure.csproj"
               }
             }
           }
@@ -368,7 +368,12 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
         }
       }
     }
