@@ -281,6 +281,7 @@ namespace shop.commerce.api.infrastructure.Repositories.EntityFramework
                         MetaDescription = item.Product.MetaDescription,
                         MetaKeywords = item.Product.MetaKeywords,
                         Quantity = item.Product.Quantity,
+                        QuantityInitial = item.Product.QuantityInitial,
                         CountView = item.Product.CountView
                     };
                 }
@@ -500,6 +501,7 @@ namespace shop.commerce.api.infrastructure.Repositories.EntityFramework
                             MetaDescription = p.MetaDescription,
                             MetaKeywords = p.MetaKeywords,
                             Quantity = p.Quantity,
+                            QuantityInitial = p.QuantityInitial,
                             CountView = p.CountView,
                             Image = pi
                         };
@@ -531,6 +533,7 @@ namespace shop.commerce.api.infrastructure.Repositories.EntityFramework
                         MetaDescription = p.MetaDescription,
                         MetaKeywords = p.MetaKeywords,
                         Quantity = p.Quantity,
+                        QuantityInitial = p.QuantityInitial,
                         CountView = p.CountView,
                         IsOffer = Calcul.IsOffer(p.OldPrice, p.NewPrice),
                         Offer = Calcul.Offer(p.OldPrice, p.NewPrice),

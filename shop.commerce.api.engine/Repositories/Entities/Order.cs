@@ -26,7 +26,7 @@ namespace shop.commerce.api.infrastructure.Repositories.Entities
         //public DateTimeOffset? DeliveredAt { get; set; }
         public string AddressIp { get; set; }
         public string Browser { get; set; }
-        public virtual IEnumerable<OrderItem> Items { get; set; }
+        public virtual IEnumerable<OrderItem> OrderItems { get; set; }
         public virtual IEnumerable<OrderTracking> OrderTrackings { get; set; }
 
         public override void BuildSearchTerms()

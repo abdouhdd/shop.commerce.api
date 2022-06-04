@@ -1,4 +1,5 @@
 ﻿using shop.commerce.api.Application.Configuration;
+using shop.commerce.api.Application.Constantes;
 using shop.commerce.api.domain.Enum;
 using shop.commerce.api.domain.Extensions;
 using shop.commerce.api.domain.Filters;
@@ -24,14 +25,22 @@ namespace shop.commerce.api.services.Testing
         private readonly IAccountService _accountService;
         private readonly IAdminService _adminService;
         private readonly IUserService _userService;
+        private readonly IParametersRepository _parametersRepository;
         private readonly TestData _testData;
         private DataUser dataUser;
-        public InitApp(ICategoryService dataService, IAccountService accountService, IAdminService adminService, IUserService userService, TestData testData, IApplicationSettingsAccessor applicationSettingsAccessor)
+        public InitApp(ICategoryService dataService, 
+            IAccountService accountService, 
+            IAdminService adminService, 
+            IUserService userService, 
+            IParametersRepository parametersRepository, 
+            TestData testData, 
+            IApplicationSettingsAccessor applicationSettingsAccessor)
         {
             _categoryService = dataService;
             _accountService = accountService;
             _adminService = adminService;
             _userService = userService;
+            _parametersRepository = parametersRepository;
             _testData = testData;
 
             _adminService.ApplicationSettingsAccessor = applicationSettingsAccessor;
@@ -54,32 +63,37 @@ namespace shop.commerce.api.services.Testing
                 {
                     Email = "admin@gmail.com",
                     Username = "admin",
-                    PasswordHash = password
+                    PasswordHash = password,
+                    Status = EnumStatusAccount.Active
                 },
                 new Admin
                 {
                     Email = "saoudnet@gmail.com",
                     Username = "saoudnet",
-                    PasswordHash = password2
+                    PasswordHash = password2,
+                    Status = EnumStatusAccount.Active
                 },
                 new Admin
                 {
                     Email = "alfaker.10@gmail.com",
                     Username = "alfaker",
-                    PasswordHash = password2
+                    PasswordHash = password2,
+                    Status = EnumStatusAccount.Active
                 },
                 new Admin
                 {
                     Email = "fibronet.ma@gmail.com",
                     Username = "fibronet",
-                    PasswordHash = password2
+                    PasswordHash = password2,
+                    Status = EnumStatusAccount.Active
                 },
                 new Admin
                 {
                     Email = "s.saoud.etnt@gmail.com",
                     Username = "saoud",
-                    PasswordHash = password2
-                },
+                    PasswordHash = password2,
+                    Status = EnumStatusAccount.Active
+                }
             };
             
             User[] initUsers = new User[]
@@ -107,13 +121,15 @@ namespace shop.commerce.api.services.Testing
             }
 
             var resultAdmin = _accountService.AuthenticateAdmin(new AuthenticationRequest { Email = initadmins[0].Email, Password = password });
-            if (resultAdmin.Success)
+            if (resultAdmin != null && resultAdmin.Success)
             {
                 dataUser = new DataUser
                 {
                     Username = resultAdmin.Data.UserName,
                     Role = EnumRole.Admin
                 };
+
+                initParameters();
 
                 var categories = _categoryService.GetAllCategoriesView();
                 if (categories.Count == 0)
@@ -131,16 +147,17 @@ namespace shop.commerce.api.services.Testing
 
                 //MyResult<int> resultCalcul = _categoryService.CalculProducts(dataUser);
 
-                MyResult<int> resultUpdate = _adminService.UpdateAllSearchTerms(dataUser);
+                //MyResult<int> resultUpdate = _adminService.UpdateAllSearchTerms(dataUser);
                 
-                _adminService.UpdateImagesPosition(dataUser);
+                //_adminService.UpdateImagesPosition(dataUser);
 
-                
+                _adminService.FillIds();
+
                 var categoriesView = _categoryService.GetCategoriesView(active:false, hasProducts:false);
 
                 if (categoriesView.Count > 0)
                 {
-                    var products = _userService.GetProductsView(new domain.Filters.ProductFilterUser { }, dataUser);
+                    var products = _userService.GetProductsView(new ProductFilterUser { }, dataUser);
 
                     if (products.Count == 0)
                     {
@@ -209,7 +226,7 @@ namespace shop.commerce.api.services.Testing
                     var resultUser = _accountService.AuthenticateUser(new AuthenticationRequest { Email = initUsers[0].Email, Password = password });
                     if (resultUser.Success)
                     {
-                        var productsView = _userService.GetProductsView(new domain.Filters.ProductFilterUser { }, dataUser);
+                        var productsView = _userService.GetProductsView(new ProductFilterUser { }, dataUser);
                         foreach (var productView in productsView)
                         {
                             var productDetailView = _userService.GetProductDetailView(productView.Slug, dataUser);
@@ -323,6 +340,30 @@ namespace shop.commerce.api.services.Testing
                 {
                     categoryRequest.Id = result.Data.Id;
                     CreateCategories(categoryRequest.Children, result.Data.Id);
+                }
+            }
+        }
+
+        private void initParameters()
+        {
+            Dictionary<string, string> keys = new Dictionary<string, string>
+            {
+                { ApplicationParameters.NOTIFY_NEW_ORDER, "{FullName} a commander le produit {productName}" }
+            };
+            bool ok = _parametersRepository.IsAllkeysExist(keys.Keys.ToArray());
+            if (!ok)
+            {
+                foreach (var item in keys)
+                {
+                    bool keyExist = _parametersRepository.IsExist(p => p.Id == item.Key);
+                    if (!keyExist)
+                    {
+                        _parametersRepository.Add(new Parameters
+                        {
+                            Id = ApplicationParameters.NOTIFY_NEW_ORDER,
+                            Value = item.Value
+                        });
+                    }
                 }
             }
         }

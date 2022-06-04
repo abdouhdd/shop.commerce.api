@@ -13,6 +13,7 @@ namespace shop.commerce.api.domain.Request
         public decimal OldPrice { get; set; }
         public decimal NewPrice { get; set; }
         public decimal Quantity { get; set; }
+        public decimal QuantityInitial { get; set; }
         public bool IsOffer { get; set; }
         public decimal Offer { get; set; }
         public string MetaTitle { get; set; }

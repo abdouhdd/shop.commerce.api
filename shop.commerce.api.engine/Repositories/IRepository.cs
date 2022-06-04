@@ -177,5 +177,7 @@
         /// </summary>
         /// <returns>true if changes is affected to database</returns>
         int Save();
+        void Migrate();
+        bool EnsureCreated();
     }
 }

@@ -8,7 +8,7 @@ namespace shop.commerce.api.infrastructure.Configuration
     {
         public void Configure(EntityTypeBuilder<Slide> builder)
         {
-            builder.HasKey(prop => new { prop.Id });
+            //builder.HasKey(prop => prop.Id);
         }
     }
 }

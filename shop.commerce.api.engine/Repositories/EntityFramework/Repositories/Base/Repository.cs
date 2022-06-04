@@ -293,6 +293,17 @@ namespace shop.commerce.api.infrastructure.Repositories.EntityFramework
         }
 
         #endregion
+
+        public bool EnsureCreated()
+        {
+            bool created = _context.Database.EnsureCreated();
+            return created;
+        }
+
+        public void Migrate()
+        {
+            _context.Database.Migrate();
+        }
     }
 
     /// <summary>

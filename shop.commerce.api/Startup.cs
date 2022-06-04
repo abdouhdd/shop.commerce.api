@@ -121,7 +121,7 @@ namespace shop.commerce.api.presentation
             //services.AddScoped<ShopContextFactory>();
 
             ServiceProvider buildServiceProvider = services.BuildServiceProvider();
-            
+
             //var applicationSecretsAccessor = buildServiceProvider.GetRequiredService<IApplicationSecretsAccessor>();
             //services.AddDbContext<ShopContext>(o => o.UseNpgsql(applicationSecretsAccessor.GetMainDatabase(), opt => opt.SetPostgresVersion(new Version(9, 6))));
 

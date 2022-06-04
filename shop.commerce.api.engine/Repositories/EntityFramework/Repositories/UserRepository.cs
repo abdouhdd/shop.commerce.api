@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -22,12 +23,6 @@ namespace shop.commerce.api.infrastructure.Repositories.EntityFramework
                 _context.Users.Add(user);
             }
             return _context.SaveChanges();
-        }
-
-        public bool EnsureCreated()
-        {
-            bool created = _context.Database.EnsureCreated();
-            return created;
         }
 
         public bool EnsureDeleted()

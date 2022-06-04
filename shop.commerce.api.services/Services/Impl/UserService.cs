@@ -1,4 +1,5 @@
 ﻿using shop.commerce.api.Application.Configuration;
+using shop.commerce.api.Application.Constantes;
 using shop.commerce.api.common;
 using shop.commerce.api.domain.Enum;
 using shop.commerce.api.domain.Extensions;
@@ -22,15 +23,28 @@ namespace shop.commerce.api.services.Services
         private readonly ICategoryRepository _categoryRepository;
         private readonly IOrderRepository _orderRepository;
         private readonly IOrderItemRepository _orderItemRepository;
+        private readonly INotificationRepository _notificationRepository;
+        private readonly IAdminRepository _adminRepository;
+        private readonly IParametersRepository _parametersRepository;
         private readonly MessagesHelper _messagesHelper;
         public IApplicationSettingsAccessor ApplicationSettingsAccessor { get; set; }
 
-        public UserService(IProductRepository productRepository, ICategoryRepository categoryRepository, IOrderRepository orderRepository, IOrderItemRepository orderItemRepository, MessagesHelper messagesHelper)
+        public UserService(IProductRepository productRepository, 
+            ICategoryRepository categoryRepository, 
+            IOrderRepository orderRepository, 
+            IOrderItemRepository orderItemRepository,
+            INotificationRepository notificationRepository,
+            IAdminRepository adminRepository,
+            IParametersRepository parametersRepository,
+            MessagesHelper messagesHelper)
         {
             _productRepository = productRepository;
             _categoryRepository = categoryRepository;
             _orderRepository = orderRepository;
             _orderItemRepository = orderItemRepository;
+            _notificationRepository = notificationRepository;
+            _adminRepository = adminRepository;
+            _parametersRepository = parametersRepository;
             _messagesHelper = messagesHelper;
         }
 
@@ -165,20 +179,22 @@ namespace shop.commerce.api.services.Services
                 orderItems[i] = new OrderItem
                 {
                     ProductId = product.Id,
+                    Product = product,
                     Qty = orderItem.Qty,
                     Price = product.NewPrice,
                     TotalPrice = orderItem.Price,
+                    OrderItemNumber = Guid.NewGuid().ToString("n").Substring(0, 10)
                 };
             }
-
+            order.OrderItems = orderItems;
             Result<Order> result = _orderRepository.Add(order);
-            foreach (OrderItem orderItem in orderItems)
-            {
-                orderItem.OrderId = order.Id;
-                orderItem.OrderItemNumber = Guid.NewGuid().ToString("n").Substring(0, 10);
-            }
+            //foreach (OrderItem orderItem in orderItems)
+            //{
+            //    orderItem.OrderId = order.Id;
+            //    orderItem.OrderItemNumber = Guid.NewGuid().ToString("n").Substring(0, 10);
+            //}
 
-            Result resultItems = _orderItemRepository.AddRange(orderItems);
+            //Result resultItems = _orderItemRepository.AddRange(orderItems);
 
             //foreach (Product product in products)
             //{
@@ -187,6 +203,45 @@ namespace shop.commerce.api.services.Services
             //}
             //output = _orderRepository.Save();
 
+            Parameters parameter = _parametersRepository.GetById(ApplicationParameters.NOTIFY_NEW_ORDER);
+
+            string[] admins = products.Select(x => x.Admin).Distinct().ToArray();
+            Admin[] admins1 = _adminRepository.GetAll(req => req.AddPredicate(a => admins.Contains(a.Username)));
+
+            List<Notification> notifications = new List<Notification>();
+            foreach (Admin admin in admins1)
+            {
+                Product[] products1 = products.Where(p => p.Admin == admin.Username).ToArray();
+                string productName = products1[0].ShortName ?? products1[0].Name;
+                if (products1.Length > 1)
+                {
+                    foreach (var product in products1)
+                    {
+                        productName += $", {product.ShortName ?? product.Name}";
+                    }
+                }
+                string message = parameter.Value
+                    .Replace("{FullName}", order.FullName, StringComparison.OrdinalIgnoreCase)
+                    .Replace("{Phone}", order.Phone, StringComparison.OrdinalIgnoreCase)
+                    .Replace("{Email}", order.Email, StringComparison.OrdinalIgnoreCase)
+                    .Replace("{ProductName}", productName, StringComparison.OrdinalIgnoreCase);
+
+                notifications.Add(new Notification
+                {
+                    AdminId = admin.Id,
+                    IsViewed = false,
+                    Id = Guid.NewGuid().ToString("n").Substring(0, 30),
+                    Data = new DataNotification
+                    {
+                        ClassName = "",
+                        Icon = "",
+                        Title = message,
+                        SubTitle = "",
+                        Status = ""
+                    }
+                });
+            }
+            _notificationRepository.AddRange(notifications);
             OrderView orderView = GetOrderViewBy(order.OrderNumber);
             if (orderView != null)
             {

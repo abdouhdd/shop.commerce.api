@@ -459,6 +459,7 @@ namespace shop.commerce.api.services.Services
                     IsOffer = Calcul.IsOffer(productRequest.OldPrice, productRequest.NewPrice),
                     Offer = Calcul.Offer(productRequest.OldPrice, productRequest.NewPrice),
                     Quantity = productRequest.Quantity,
+                    QuantityInitial = productRequest.QuantityInitial,
                     Rating = productRequest.Rating,
                     Description = productRequest.Description?.Trim(),
                     Details = productRequest.Details?.Trim(),
@@ -706,6 +707,20 @@ namespace shop.commerce.api.services.Services
                         Date = DateTime.UtcNow
                     };
                     _orderTrackingRepository.Add(orderTracking);
+
+                    foreach (var item in order.OrderItems)
+                    {
+                        item.Product.Quantity -= item.Qty;
+                    }
+                    int[] products = order.OrderItems.Select(i => i.ProductId).Distinct().ToArray();
+
+                    IEnumerable<OrderItem> orderItems = _orderRepository.GetOrdersFor(oi => oi.Order.Status == EnumOrderStatus.Completed && products.Contains(oi.ProductId));
+
+                    foreach (var product in order.OrderItems.Select(i => i.Product))
+                    {
+                        decimal quantityConsome = orderItems.Where(o => o.ProductId == product.Id).Sum(o => o.Qty);
+                        product.Quantity = product.QuantityInitial - quantityConsome;
+                    }
                 }
                 return MyResult<int>.ResultSuccess(output);
             }
@@ -1042,6 +1057,11 @@ namespace shop.commerce.api.services.Services
             {
                 _logger.LogError(ex, ex.Message);
             }
+        }
+
+        public void FillIds()
+        {
+            //var all = _orderRepository.GetAll();
         }
     }
 }

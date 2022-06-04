@@ -116,10 +116,10 @@ namespace shop.commerce.api.services.Services
                             result = MyResult<ProfileModel>.ResultError(null, message, code);
                         }
                     }
-                    //if(result == null)
-                    //{
-                    //    result = Result<ProfileModel>.ResultError(null, _messagesHelper.GetMessageCode(ResultCode.UserDesactiveEnTime), ResultCode.UserDesactiveEnTime);
-                    //}
+                    if (result == null)
+                    {
+                        result = MyResult<ProfileModel>.ResultError(null, _messagesHelper.GetMessageCode(MyResultCode.UserDesactiveEnTime), MyResultCode.UserDesactiveEnTime);
+                    }
                 }
                 else
                 {
@@ -274,16 +274,17 @@ namespace shop.commerce.api.services.Services
 
         public bool EnsureCreated()
         {
+            bool created = false;
             try
             {
-                bool created = _userRepository.EnsureCreated();
-                return created;
+                //created = _userRepository.EnsureCreated();
+                //_userRepository.Migrate();
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, ex.Message);
-                return false;
             }
+            return created;
         }
 
         public bool EnsureDeleted()

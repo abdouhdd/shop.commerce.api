@@ -116,6 +116,8 @@ namespace Microsoft.Extensions.DependencyInjection
             builder.Services.AddScoped<IOrderItemRepository, OrderItemRepository>();
             builder.Services.AddScoped<IOrderTrackingRepository, OrderTrackingRepository>();
             builder.Services.AddScoped<ISlideRepository, SlideRepository>();
+            builder.Services.AddScoped<INotificationRepository, NotificationRepository>();
+            builder.Services.AddScoped<IParametersRepository, ParametersRepository>();
 
         }
     }

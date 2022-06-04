@@ -8,9 +8,10 @@ namespace shop.commerce.api.infrastructure.Configuration
     {
         public void Configure(EntityTypeBuilder<ProductImage> builder)
         {
-            builder.HasKey(prop => new { prop.ProductId, prop.Filename });
-            builder.HasAlternateKey(prop => prop.Id)
-                .HasName("UXC_ProductImage_Id");
+            builder.HasIndex(prop => new { prop.ProductId, prop.Filename })
+                .IsUnique();
+            //builder.HasAlternateKey(prop => prop.Id)
+            //    .HasName("UXC_ProductImage_Id");
 
             //builder.HasOne(img => img.Product)
             //  .WithMany(p => p.ProductImages)

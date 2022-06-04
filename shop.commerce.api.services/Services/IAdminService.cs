@@ -11,6 +11,7 @@ using System.Collections.Generic;
 
 namespace shop.commerce.api.services.Services
 {
+
     public interface IAdminService
     {
         IApplicationSettingsAccessor ApplicationSettingsAccessor { get; set; }
@@ -36,5 +37,6 @@ namespace shop.commerce.api.services.Services
         MyResult<int> UpdateAllSearchTerms(DataUser dataUser);
         void UpdateImagesPosition(DataUser dataUser);
         MyResult<int> DesactivateProduct(string slug, DataUser dataUser);
+        void FillIds();
     }
 }

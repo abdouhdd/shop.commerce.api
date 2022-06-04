@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 using shop.commerce.api.infrastructure.Configuration;
 using shop.commerce.api.infrastructure.Repositories.Entities;
 using shop.commerce.api.infrastructure.Utilities;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 
 namespace shop.commerce.api.infrastructure.Repositories.EntityFramework
@@ -18,6 +19,8 @@ namespace shop.commerce.api.infrastructure.Repositories.EntityFramework
         public DbSet<OrderItem> OrderItems { get; set; }
         public DbSet<OrderTracking> OrderTrackings { get; set; }
         public DbSet<Slide> Slides { get; set; }
+        
+        public DbSet<Notification> Notifications { get; set; }
 
         public ShopContext(DbContextOptions<ShopContext> options) : base(options)
         {

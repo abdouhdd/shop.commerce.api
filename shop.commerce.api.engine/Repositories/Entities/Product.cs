@@ -18,6 +18,7 @@ namespace shop.commerce.api.infrastructure.Repositories.Entities
         public decimal OldPrice { get; set; }
         public decimal NewPrice { get; set; }
         public decimal Quantity { get; set; }
+        public decimal QuantityInitial { get; set; }
         public bool IsOffer { get; set; }
         public decimal Offer { get; set; }
         public string MetaTitle { get; set; }
@@ -34,6 +35,7 @@ namespace shop.commerce.api.infrastructure.Repositories.Entities
         public string VenduWith { get; set; }
         public virtual Category Category { get; set; }
         public virtual IEnumerable<ProductImage> ProductImages { get; set; }
+        public virtual IEnumerable<OrderItem> OrderItems { get; set; }
 
         public override void BuildSearchTerms()
             => SearchTerms = $"{Name} {Description} {Slug} {MetaKeywords} {MetaTitle} {MetaDescription}".ToLower();

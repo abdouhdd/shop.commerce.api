@@ -1,6 +1,7 @@
 ﻿using shop.commerce.api.domain.Enum;
 using shop.commerce.api.domain.Views;
 using shop.commerce.api.infrastructure.Repositories.Entities;
+using System;
 using System.Collections.Generic;
 
 namespace shop.commerce.api.infrastructure.Repositories
@@ -14,5 +15,6 @@ namespace shop.commerce.api.infrastructure.Repositories
         IEnumerable<OrderTracking> GetOrderTrackings(int orderId);
         OrderItemView GetOrderDetailsView(string orderItemNumber);
         OrderView GetOrderView(string orderNumber);
+        IEnumerable<OrderItem> GetOrdersFor(Func<OrderItem, bool> predicate);
     }
 }

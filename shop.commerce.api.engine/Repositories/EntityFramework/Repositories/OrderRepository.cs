@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using shop.commerce.api.domain.Enum;
 using shop.commerce.api.domain.Views;
 using shop.commerce.api.infrastructure.Repositories.Entities;
@@ -14,7 +15,7 @@ namespace shop.commerce.api.infrastructure.Repositories.EntityFramework
        
         public Order GetOrderBy(string orderNumber)
         {
-            Order order = _entity.Where(o => o.OrderNumber == orderNumber).SingleOrDefault();
+            Order order = _entity.Where(o => o.OrderNumber == orderNumber).Include(e => e.OrderItems).ThenInclude(e => e.Product).SingleOrDefault();
             return order;
         }
 
@@ -248,6 +249,12 @@ namespace shop.commerce.api.infrastructure.Repositories.EntityFramework
         {
             IEnumerable<OrderTracking> orderTrackings = _context.OrderTrackings.Where(ot => ot.OrderId == orderId).ToList();
             return orderTrackings;
+        }
+
+        public IEnumerable<OrderItem> GetOrdersFor(Func<OrderItem, bool> predicate)
+        {
+            return _context.OrderItems.Where(predicate)
+                .ToList();
         }
     }
 
