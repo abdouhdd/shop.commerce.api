@@ -1,6 +1,6 @@
 ﻿using shop.commerce.api.domain.Enum;
 using shop.commerce.api.domain.Views;
-using shop.commerce.api.infrastructure.Repositories.Entities;
+using shop.commerce.api.domain.Entities;
 using System.Collections.Generic;
 
 namespace shop.commerce.api.infrastructure.Repositories

@@ -1,5 +1,7 @@
 ﻿
-namespace shop.commerce.api.infrastructure.Repositories.Entities
+using shop.commerce.api.domain.Entities;
+
+namespace shop.commerce.api.domain.Entities
 {
     public class Admin : Account
     {

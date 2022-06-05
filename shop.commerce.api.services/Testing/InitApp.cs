@@ -8,7 +8,7 @@ using shop.commerce.api.domain.Models.Request;
 using shop.commerce.api.domain.Request;
 using shop.commerce.api.domain.Views;
 using shop.commerce.api.infrastructure.Repositories;
-using shop.commerce.api.infrastructure.Repositories.Entities;
+using shop.commerce.api.domain.Entities;
 using shop.commerce.api.services.Models;
 using shop.commerce.api.services.Services;
 using System;

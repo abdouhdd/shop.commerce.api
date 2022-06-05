@@ -1,5 +1,5 @@
 ﻿using shop.commerce.api.domain.Request;
-using shop.commerce.api.infrastructure.Repositories.Entities;
+using shop.commerce.api.domain.Entities;
 using System;
 using System.Collections.Generic;
 

@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using shop.commerce.api.domain.Entities;
 using System.Collections.Generic;
 using System.Linq;
 

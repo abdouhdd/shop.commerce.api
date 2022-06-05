@@ -1,9 +1,8 @@
-﻿
-using shop.commerce.api.common;
+﻿using shop.commerce.api.common;
 using shop.commerce.api.domain.Enum;
 using System;
 
-namespace shop.commerce.api.infrastructure.Repositories.Entities
+namespace shop.commerce.api.domain.Entities
 {
     public class Account : Entity<int>
     {

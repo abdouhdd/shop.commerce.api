@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 //using System.ComponentModel.DataAnnotations.Schema;
 
-namespace shop.commerce.api.infrastructure.Repositories.Entities
+namespace shop.commerce.api.domain.Entities
 {
     public class Category : Entity<int>
     {
