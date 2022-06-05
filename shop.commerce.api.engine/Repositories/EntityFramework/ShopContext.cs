@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using shop.commerce.api.infrastructure.Configuration;
-using shop.commerce.api.infrastructure.Repositories.Entities;
+using shop.commerce.api.domain.Entities;
 using shop.commerce.api.infrastructure.Utilities;
 using System.Linq;
 

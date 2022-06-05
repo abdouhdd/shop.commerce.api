@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using shop.commerce.api.domain.Entities;
+using System.Collections.Generic;
 
 namespace shop.commerce.api.infrastructure.Repositories
 {

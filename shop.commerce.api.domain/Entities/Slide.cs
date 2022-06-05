@@ -1,6 +1,6 @@
 ﻿using shop.commerce.api.common;
 
-namespace shop.commerce.api.infrastructure.Repositories.Entities
+namespace shop.commerce.api.domain.Entities
 {
     public class Slide : Entity<int>
     {

@@ -3,7 +3,7 @@ using shop.commerce.api.domain.Filters;
 using shop.commerce.api.domain.Models;
 using shop.commerce.api.domain.Models.Request;
 using shop.commerce.api.domain.Views;
-using shop.commerce.api.infrastructure.Repositories.Entities;
+using shop.commerce.api.domain.Entities;
 using shop.commerce.api.services.Models;
 using System.Collections.Generic;
 

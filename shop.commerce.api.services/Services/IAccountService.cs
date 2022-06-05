@@ -1,7 +1,7 @@
 ﻿using shop.commerce.api.domain.Models;
 using shop.commerce.api.domain.Models.Account;
 using shop.commerce.api.infrastructure.Repositories;
-using shop.commerce.api.infrastructure.Repositories.Entities;
+using shop.commerce.api.domain.Entities;
 using System.Collections.Generic;
 
 namespace shop.commerce.api.services.Services

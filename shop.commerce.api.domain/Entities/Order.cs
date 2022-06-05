@@ -3,7 +3,7 @@ using shop.commerce.api.domain.Enum;
 using System;
 using System.Collections.Generic;
 
-namespace shop.commerce.api.infrastructure.Repositories.Entities
+namespace shop.commerce.api.domain.Entities
 {
     public class Order : Entity<int>
     {

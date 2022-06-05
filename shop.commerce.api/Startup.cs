@@ -21,6 +21,7 @@ namespace shop.commerce.api.presentation
     using Hangfire.SqlServer;
     using System;
     using Microsoft.AspNetCore.HttpOverrides;
+    using shop.commerce.api.Application.MappingProfiles;
 
     public class Startup
     {
@@ -70,6 +71,8 @@ namespace shop.commerce.api.presentation
 
             ConfigureSwagger(services);
             ConfigureLogger();
+
+            services.AddAutoMapper(typeof(GlobalMapping).Assembly);
 
 
             //services.Configure<ForwardedHeadersOptions>(options =>

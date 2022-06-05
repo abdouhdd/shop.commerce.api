@@ -3,7 +3,7 @@ using shop.commerce.api.domain.Enum;
 using shop.commerce.api.domain.Models;
 using shop.commerce.api.domain.Models.Account;
 using shop.commerce.api.infrastructure.Repositories;
-using shop.commerce.api.infrastructure.Repositories.Entities;
+using shop.commerce.api.domain.Entities;
 using shop.commerce.api.infrastructure.Repositories.EntityFramework;
 using shop.commerce.api.services.Helpers;
 using System;

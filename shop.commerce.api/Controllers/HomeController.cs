@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Http;
 using System.Net.Http.Headers;
 using System.IO;
 //using Microsoft.Extensions.DependencyInjection;
-using shop.commerce.api.infrastructure.Repositories.Entities;
+using shop.commerce.api.domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 
 namespace shop.commerce.api.presentation.Controllers

@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using shop.commerce.api.domain.Views;
-using shop.commerce.api.infrastructure.Repositories.Entities;
+using shop.commerce.api.domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

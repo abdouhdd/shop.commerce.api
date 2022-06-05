@@ -1,7 +1,7 @@
 ﻿using shop.commerce.api.common;
 using System;
 
-namespace shop.commerce.api.infrastructure.Repositories.Entities
+namespace shop.commerce.api.domain.Entities
 {
     public class ProductImage : Entity<string>
     {

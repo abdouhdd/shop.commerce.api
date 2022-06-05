@@ -1,7 +1,7 @@
 ﻿using shop.commerce.api.common;
 using System.Collections.Generic;
 
-namespace shop.commerce.api.infrastructure.Repositories.Entities
+namespace shop.commerce.api.domain.Entities
 {
     public class Product : Entity<int>
     {
