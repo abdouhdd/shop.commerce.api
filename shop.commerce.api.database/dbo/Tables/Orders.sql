@@ -15,15 +15,20 @@
     [Status]        INT             NOT NULL,
     [PaymentMethod] INT             NOT NULL,
     [OrdersNote]    NVARCHAR (MAX)  NULL,
-    [InsertDate]    DATETIME2 (7)   NOT NULL,
-    [LastUpdate]    DATETIME2 (7)   NOT NULL,
-    [AddressIp] VARCHAR(50) NULL, 
-    [Browser] VARCHAR(255) NULL, 
-    [SearchTerms] NVARCHAR(MAX) NOT NULL DEFAULT '', 
-    --[ProcessAt]     DATETIME2 (7)   NULL,
-    --[DeliveredAt]     DATETIME2 (7)   NULL,
+    [AddressIp]     NVARCHAR (MAX)  NULL,
+    [Browser]       NVARCHAR (MAX)  NULL,
+    [InsertDate]    DATETIME2 (7)   DEFAULT (getdate()) NOT NULL,
+    [LastUpdate]    DATETIME2 (7)   DEFAULT (getdate()) NULL,
+    [SearchTerms]   NVARCHAR (500)  NULL,
     CONSTRAINT [PK_Orders] PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 
 
+
+
+
+
+GO
+CREATE NONCLUSTERED INDEX [IX_Orders_SearchTerms]
+    ON [dbo].[Orders]([SearchTerms] ASC);
 

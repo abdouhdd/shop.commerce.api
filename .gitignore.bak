@@ -1,0 +1,20 @@
+﻿################################################################################
+# Ce fichier .gitignore a été automatiquement créé par Microsoft(R) Visual Studio.
+################################################################################
+
+/etnt.commerce.api.domain/obj
+/shop.commerce.api/obj
+/shop.commerce.api.Application/bin
+/shop.commerce.api.Application/obj
+/shop.commerce.api.common/bin
+/shop.commerce.api.common/obj
+/shop.commerce.api.database/obj
+/shop.commerce.api.domain/bin
+/shop.commerce.api.domain/obj
+/shop.commerce.api.engine/bin
+/shop.commerce.api.engine/obj
+/shop.commerce.api.services/bin
+
+/shop.commerce.api.database/shop.commerce.api.database.jfm
+/shop.commerce.api.database/bin
+*.dbmdl

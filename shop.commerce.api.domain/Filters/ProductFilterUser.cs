@@ -17,6 +17,7 @@ namespace shop.commerce.api.domain.Filters
         public int Length { get; set; } = 10;
         public int? CategoryId { get; set; }
         public string Search { get; set; }
+        public string Seller { get; set; }
     }
 
 }
