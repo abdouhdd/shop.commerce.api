@@ -187,6 +187,13 @@ namespace shop.commerce.api.presentation.Controllers
             return Ok(result);
         }
 
+        [HttpPost("UpdateSeller")]
+        public ActionResult UpdateSeller(AdminPutModel model)
+        {
+            var result = _adminService.UpdateSeller(model, DataUser);
+            return Ok(result);
+        }
+
         [HttpGet("GetSellers")]
         public ActionResult GetSellers()
         {

@@ -39,5 +39,6 @@ namespace shop.commerce.api.services.Services
         MyResult<int> DesactivateProduct(string slug, DataUser dataUser);
         MyResult<string> CreateSeller(AdminPutModel model, DataUser dataUser);
         MyResult<Admin[]> GetSellers(DataUser dataUser);
+        MyResult<string> UpdateSeller(AdminPutModel model, DataUser dataUser);
     }
 }

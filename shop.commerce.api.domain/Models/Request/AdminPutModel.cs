@@ -9,6 +9,7 @@ namespace shop.commerce.api.domain.Models.Request
 {
     public class AdminPutModel
     {
+        public int Id { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
         public string Firstname { get; set; }
@@ -17,7 +18,9 @@ namespace shop.commerce.api.domain.Models.Request
         public string Phone { get; set; }
         public string Country { get; set; }
         public string City { get; set; }
-        public EnumStatusAccount Status { get; set; }
+        public EnumStatusAccount? Status { get; set; }
+        public EnumRole? Role { get; set; }
+
 
     }
 }

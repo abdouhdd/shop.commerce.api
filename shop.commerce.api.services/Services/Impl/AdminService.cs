@@ -1055,6 +1055,7 @@ namespace shop.commerce.api.services.Services
             var admins = _adminRepository.GetAll();
             return MyResult<Admin[]>.ResultSuccess(admins);
         }
+
         public MyResult<string> CreateSeller(AdminPutModel model, DataUser dataUser)
         {
             var all = _adminRepository.GetAll(req => req.AddPredicate(a => a.Email == model.Email || a.Username == model.Username));
@@ -1069,14 +1070,47 @@ namespace shop.commerce.api.services.Services
                 Lastname = model.Lastname,
                 Email = model.Email,
                 Username = model.Username,
+                City = model.City,
+                Phone = model.Phone,
+                Country = model.Country,
+                Role = model.Role.HasValue ? model.Role.Value : EnumRole.Admin,
                 Status = EnumStatusAccount.Active
             };
             admin.Role = EnumRole.Admin;
             admin.RegistrationDate = DateTime.UtcNow;
 
-            HashMD5 hashMD5 = new HashMD5();
             if (!string.IsNullOrEmpty(model.Password))
             {
+                HashMD5 hashMD5 = new HashMD5();
+                admin.PasswordHash = hashMD5.GetMd5Hash(model.Password);
+            }
+
+            common.Result output = _adminRepository.Add(admin);
+            return MyResult<string>.ResultSuccess("");
+        }
+        
+        public MyResult<string> UpdateSeller(AdminPutModel model, DataUser dataUser)
+        {
+            Admin admin = _adminRepository.GetById(model.Id);
+            if (admin == null)
+            {
+                return MyResult<string>.ResultError("", _messagesHelper.GetMessageCode(MyResultCode.CreateSellerExiste), MyResultCode.CreateSellerExiste);
+            }
+
+            admin.Firstname = model.Firstname;
+            admin.Lastname = model.Lastname;
+            admin.Email = model.Email;
+            admin.Username = model.Username;
+            admin.City = model.City;
+            admin.Phone = model.Phone;
+            admin.Country = model.Country;
+            admin.Role = model.Role.HasValue ? model.Role.Value : admin.Role;
+            admin.Status = model.Status.HasValue ? model.Status.Value : admin.Status;
+            admin.LastUpdate = DateTime.UtcNow;
+
+            if (!string.IsNullOrEmpty(model.Password))
+            {
+                HashMD5 hashMD5 = new HashMD5();
                 admin.PasswordHash = hashMD5.GetMd5Hash(model.Password);
             }
 
