@@ -1074,7 +1074,7 @@ namespace shop.commerce.api.services.Services
                 Phone = model.Phone,
                 Country = model.Country,
                 Role = model.Role.HasValue ? model.Role.Value : EnumRole.Admin,
-                Status = EnumStatusAccount.Active
+                Status = model.Status.HasValue ? model.Status.Value : EnumStatusAccount.Active
             };
             admin.Role = EnumRole.Admin;
             admin.RegistrationDate = DateTime.UtcNow;
@@ -1114,7 +1114,7 @@ namespace shop.commerce.api.services.Services
                 admin.PasswordHash = hashMD5.GetMd5Hash(model.Password);
             }
 
-            common.Result output = _adminRepository.Add(admin);
+            common.Result output = _adminRepository.Update(admin);
             return MyResult<string>.ResultSuccess("");
         }
 
